@@ -55,7 +55,7 @@ const Service: React.FC = () => {
                 key={step.step}
                 className="grid gap-4 rounded-md border border-solid border-gray-300 p-8 md:p-10">
                 <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-100">
-                  <p className="text-sm font-bold sm:text-xl">{step.step}</p>
+                  <p className="text-black text-sm font-bold sm:text-xl">{step.step}</p>
                 </div>
                 <p className="text-xl font-semibold">{step.title}</p>
                 <p className="text-sm text-gray-500">{step.description}</p>

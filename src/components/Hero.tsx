@@ -1,4 +1,5 @@
 import mainJpg from "../assets/main.jpg";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -23,13 +24,13 @@ export default function Hero() {
           </p>
           {/* Hero Button */}
           <div className="flex items-stretch justify-center">
-            <a
-              href="#"
+            <Link
+              to="/contact"
               className="mr-5 inline-block rounded-md bg-black px-8 py-4 text-center font-semibold text-white dark:bg-white dark:text-black md:mr-6 lg:mr-8">
               Get a Free Consultation
-            </a>
-            <a
-              href="#"
+            </Link>
+            <Link
+              to="/samples"
               className="flex items-center justify-center rounded-md border border-solid border-black px-6 py-3 font-bold text-black dark:border-white dark:text-white">
               <img
                 src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a944888e6cf97_PlayCircle%20(1).svg"
@@ -37,7 +38,7 @@ export default function Hero() {
                 className="mr-2 inline-block max-h-4 w-5"
               />
               <p className="text-sm text-black dark:text-white sm:text-base">View Samples</p>
-            </a>
+            </Link>
           </div>
         </div>
         {/* Hero Image */}

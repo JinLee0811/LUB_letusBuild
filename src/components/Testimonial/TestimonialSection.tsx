@@ -4,10 +4,10 @@ import { testimonials } from "./testmonialData";
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="relative">
+    <section className="relative bg-white dark:bg-gray-900">
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-10 md:py-20">
         {/* Heading Text */}
-        <h2 className="mx-auto mb-6 w-full max-w-3xl text-center text-3xl font-semibold md:mb-12 md:text-5xl">
+        <h2 className="mx-auto mb-6 w-full max-w-3xl text-center text-3xl font-semibold text-gray-900 dark:text-white md:mb-12 md:text-5xl">
           What Our Clients Are Saying
         </h2>
         {/* Testimonial Wall */}
@@ -15,7 +15,7 @@ const Testimonials: React.FC = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 bg-white p-8">
+              className="mb-6 gap-6 overflow-hidden rounded-2xl border border-solid border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 p-8">
               <div className="mb-4 flex flex-row">
                 <img
                   src={testimonial.image}
@@ -23,11 +23,15 @@ const Testimonials: React.FC = () => {
                   className="mr-4 inline-block h-16 w-16 object-cover rounded-full"
                 />
                 <div className="flex flex-col">
-                  <h6 className="text-base font-semibold">{testimonial.name}</h6>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <h6 className="text-base font-semibold text-gray-900 dark:text-white">
+                    {testimonial.name}
+                  </h6>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">{testimonial.role}</p>
                 </div>
               </div>
-              <p className="mb-4 text-sm text-gray-500">{testimonial.feedback}</p>
+              <p className="mb-4 text-sm text-gray-500 dark:text-gray-300">
+                {testimonial.feedback}
+              </p>
               <div className="flex">
                 {Array.from({ length: testimonial.stars }).map((_, starIndex) => (
                   <img

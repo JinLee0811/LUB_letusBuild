@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import TeamCard from "./TeamCard";
+import JinImage from "../../assets/JinImage.jpeg";
 
 const teamMembers = [
   {
     id: 1,
-    name: "Arthur Melo",
-    role: "Design Director",
+    name: "HY Kim",
+    role: "Owner",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "https://files.oaiusercontent.com/file-BcWZer7zqnTpVJaot7sLVz?se=2025-01-23T07%3A44%3A13Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dd6e627f9-3240-4f39-9421-fd27575d5376.webp&sig=qBm2cjxd%2BdAX5oAGGb9VPhOtrH7sSMkiwwWZUkA0Bag%3D",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     socialLinks: {
       reddit: "#",
@@ -17,10 +18,9 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Amelia Anderson",
+    name: "Jin Lee",
     role: "Lead Developer",
-    image:
-      "https://images.unsplash.com/photo-1531590878845-12627191e687?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+    image: JinImage,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     socialLinks: {
       reddit: "#",
@@ -30,7 +30,7 @@ const teamMembers = [
   },
   {
     id: 3,
-    name: "Olivia Wathan",
+    name: "Hayley Kim",
     role: "Lead Designer",
     image:
       "https://images.unsplash.com/photo-1488508872907-592763824245?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
@@ -43,10 +43,10 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "John Doe",
+    name: "Elodie Kim",
     role: "Full Stack Developer",
     image:
-      "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
+      "https://files.oaiusercontent.com/file-1aNNK82XM1hz1YbhDUxifA?se=2025-01-23T07%3A45%3A45Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D767c220b-a201-40a3-8bda-2bc67aabe523.webp&sig=nrkjbK5HUB/t4qyrjDU20sFHeSP8aoEo4kVfqzs3tB8%3D",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
     socialLinks: {
       reddit: "#",

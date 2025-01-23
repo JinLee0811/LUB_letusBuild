@@ -12,72 +12,72 @@ export const testimonials: Testimonial[] = [
   {
     stars: 5,
     feedback:
-      "Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis",
-    name: "Laila Bahar",
-    role: "Designer",
+      "They created a stunning and simple website for my business in such a short time. Highly recommended!",
+    name: "Jinhee Kim",
+    role: "Hairdresser",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
+  },
+  {
+    stars: 4,
+    feedback:
+      "Their communication and attention to detail were impressive. The website turned out exactly as I envisioned.",
+    name: "Minjae Lee",
+    role: "Cafe Owner",
     image:
       "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
   },
   {
     stars: 5,
     feedback:
-      "Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis",
-    name: "John Doe",
-    role: "Developer",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
-  },
-  {
-    stars: 5,
-    feedback:
-      "Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis",
-    name: "Jane Smith",
-    role: "Photographer",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
-  },
-  {
-    stars: 5,
-    feedback:
-      "Lorem ipsum dolor sit amet, elit ut aliquam, purus sit amet luctus venenatis elit ut aliquam, purus sit amet luctus venenatis",
-    name: "David James",
-    role: "CEO/ Chairman",
-    image:
-      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
-  },
-  {
-    stars: 5,
-    feedback:
-      "The team was incredibly professional and delivered beyond our expectations. Highly recommend!",
+      "The team delivered an elegant website that exceeded my expectations. It was a pleasure working with them.",
     name: "Sophia Lee",
     role: "Marketing Manager",
     image:
       "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
   },
   {
-    stars: 5,
+    stars: 4,
     feedback:
-      "Excellent service with attention to detail. The process was seamless from start to finish.",
-    name: "John Smith",
-    role: "Product Owner",
+      "They created an easy-to-use e-commerce website for my store. My customers love it, and so do I!",
+    name: "Hyejin Park",
+    role: "Online Store Owner",
     image:
       "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
   },
   {
     stars: 5,
     feedback:
-      "They truly understood our vision and brought it to life. I’m impressed with their creativity and efficiency.",
+      "I needed a professional website for my photography portfolio, and they nailed it. Amazing job!",
     name: "Emily Davis",
-    role: "Startup Founder",
+    role: "Photographer",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
+  },
+  {
+    stars: 4,
+    feedback:
+      "The website they built for my bakery is beautiful and functional. It's helped my business grow!",
+    name: "Jiwon Choi",
+    role: "Bakery Owner",
     image:
       "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
   },
   {
     stars: 5,
     feedback:
-      "Top-notch service with constant communication. I’ll definitely work with them again.",
+      "Excellent service! They understood my requirements perfectly and delivered a fantastic website.",
     name: "Michael Brown",
     role: "Freelance Consultant",
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
+  },
+  {
+    stars: 4,
+    feedback:
+      "Their expertise and dedication were evident throughout the project. I couldn’t be happier with the results.",
+    name: "Soyeon Kang",
+    role: "Startup Founder",
     image:
       "https://firebasestorage.googleapis.com/v0/b/flowspark-1f3e0.appspot.com/o/Tailspark%20Images%2FPlaceholder%20Image.svg?alt=media&token=375a1ea3-a8b6-4d63-b975-aac8d0174074",
   },
