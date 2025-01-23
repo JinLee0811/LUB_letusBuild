@@ -56,8 +56,12 @@ const Header = () => {
             </Link>
           ))}
         </div>
-        {/* Dark Mode Switch */}
         <div className="hidden lg:flex lg:flex-1 lg:justify-end items-center gap-4">
+          <Link
+            to="/faq"
+            className="text-sm/6 font-semibold text-gray-900 dark:text-white hover:underline">
+            FAQ
+          </Link>
           <div
             onClick={() => setDarkMode(!darkMode)}
             className={`relative w-16 h-8 flex items-center cursor-pointer rounded-full p-1 ${
@@ -70,11 +74,6 @@ const Header = () => {
               {darkMode ? "☾" : "☼"}
             </div>
           </div>
-          <Link
-            to="/faq"
-            className="text-sm/6 font-semibold text-gray-900 dark:text-white hover:underline">
-            FAQ
-          </Link>
         </div>
       </nav>
       <Dialog open={mobileMenuOpen} onClose={setMobileMenuOpen} className="lg:hidden">
