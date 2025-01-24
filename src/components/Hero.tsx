@@ -32,12 +32,7 @@ export default function Hero() {
             <Link
               to="/samples"
               className="flex items-center justify-center rounded-md border border-solid border-black px-6 py-3 font-bold text-black dark:border-white dark:text-white">
-              <img
-                src="https://assets.website-files.com/6458c625291a94a195e6cf3a/6458c625291a944888e6cf97_PlayCircle%20(1).svg"
-                alt=""
-                className="mr-2 inline-block max-h-4 w-5"
-              />
-              <p className="text-sm text-black dark:text-white sm:text-base">View Samples</p>
+              <p className="text-sm text-black dark:text-white sm:text-base">🔎 View Samples</p>
             </Link>
           </div>
         </div>

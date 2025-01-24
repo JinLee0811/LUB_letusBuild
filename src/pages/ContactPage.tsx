@@ -1,25 +1,79 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ContactForm from "../components/ContactForm";
 import { testimonials, Testimonial } from "../components/Testimonial/testmonialData";
+import Modal from "../components/Modal";
 
 const ContactPage: React.FC = () => {
-  const handleFormSubmit = (formData: { name: string; email: string; brief: string }) => {
-    console.log("Form submitted:", formData);
-    // Handle form submission logic (e.g., send to API)
+  const navigate = useNavigate();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false); // 로딩 상태 추가
+  const [modalContent, setModalContent] = useState<{
+    title: string;
+    message: string;
+    isError: boolean;
+  }>({
+    title: "",
+    message: "",
+    isError: false,
+  });
+
+  const handleFormSubmit = async (formData: {
+    name: string;
+    email: string;
+    phone: string;
+    brief: string;
+  }) => {
+    setIsSubmitting(true); // 로딩 시작
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbxrfQLz4K4zWiFu-ZVlFEBljt3uQ8eNR-H533QWpk8wgcjZTz0ZBhz-iNioJZmZLE_8Kg/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(formData),
+        }
+      );
+      const data = await response.json();
+      console.log(data);
+
+      // 성공 시 모달 내용 설정
+      setModalContent({
+        title: "Your message has been sent!",
+        message: "Thank you for reaching out. We will contact you shortly.",
+        isError: false,
+      });
+      setIsModalOpen(true); // 모달 열기
+    } catch (error) {
+      console.error("Submission error:", error);
+
+      // 에러 시 모달 내용 설정
+      setModalContent({
+        title: "Submission Failed",
+        message:
+          "There is an issue with the server. Please email us directly at jinlee811811@gmail.com, and we will respond promptly.",
+        isError: true,
+      });
+      setIsModalOpen(true); // 모달 열기
+    } finally {
+      setIsSubmitting(false); // 로딩 종료
+    }
   };
 
-  // Fetch a random testimonial
   const randomTestimonial: Testimonial =
     testimonials[Math.floor(Math.random() * testimonials.length)];
 
+  const handleModalClose = () => {
+    setIsModalOpen(false); // 모달 닫기
+    if (!modalContent.isError) {
+      navigate("/"); // 성공 시 홈으로 이동
+    }
+  };
+
   return (
     <section>
-      {/* Container */}
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
-        {/* Component */}
         <div className="grid items-center gap-8 sm:gap-20 lg:grid-cols-2">
           <div className="max-w-3xl">
-            {/* Title */}
             <h2 className="mb-2 text-3xl font-bold md:text-5xl">
               Contact us to schedule your free consultation!
             </h2>
@@ -28,7 +82,6 @@ const ContactPage: React.FC = () => {
               and needs with us, and we’ll create a tailored solution to match your expectations
               perfectly.
             </p>
-            {/* Testimonial */}
             <div className="mb-8 p-6 border border-gray-300 rounded-lg shadow-md bg-gray-50 dark:bg-gray-800">
               <div className="mb-4 flex items-center text-orange-500">
                 {Array.from({ length: randomTestimonial.stars }).map((_, index) => (
@@ -62,7 +115,6 @@ const ContactPage: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Contact Form Section */}
           <div className="mx-auto max-w-xl bg-gray-100 dark:bg-gray-800 p-8 text-center rounded-lg">
             <h3 className="my-5 text-2xl text-black dark:text-white font-bold md:text-3xl">
               Share Your Website Idea
@@ -71,10 +123,38 @@ const ContactPage: React.FC = () => {
               Fill out the form below with your email and a brief description of the website you
               have in mind. We’ll get back to you shortly!
             </p>
-            <ContactForm onSubmit={handleFormSubmit} />
+            <ContactForm
+              onSubmit={handleFormSubmit}
+              isSubmitting={isSubmitting} // 로딩 상태 전달
+            />
           </div>
         </div>
       </div>
+      <Modal isOpen={isModalOpen} onClose={handleModalClose}>
+        <h3 className="text-xl font-bold text-gray-800 dark:text-white mb-2">
+          {modalContent.title}
+        </h3>
+        <p className="text-gray-500 dark:text-gray-400 mb-4">
+          {modalContent.isError ? (
+            <>
+              There is an issue with the server. Please email us directly at{" "}
+              <a
+                href="mailto:jinlee811811@gmail.com"
+                className="font-bold text-blue-600 underline hover:text-blue-800">
+                jinlee811811@gmail.com
+              </a>
+              , and we will respond promptly.
+            </>
+          ) : (
+            modalContent.message
+          )}
+        </p>
+        <button
+          onClick={handleModalClose}
+          className="py-2 px-4 text-sm font-medium text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200">
+          OK
+        </button>
+      </Modal>
     </section>
   );
 };
