@@ -1,134 +1,114 @@
 import React from "react";
+import logo from "../../public/LUB_Logo.png"; // 로고 이미지 경로를 실제 경로로 교체하세요.
 import { Link } from "react-router-dom";
-import LUB_no_white from "../../public/LUB_no_white.png";
 
-const footerLinks = [
-  {
-    label: "Product",
-    links: [
-      { label: "Pricing", href: "/pricing" },
-      { label: "Changelog", href: "/changelog" },
-      { label: "Docs", href: "/docs" },
-    ],
+const footerData = {
+  // description:
+  //   "This is my information. If you have any questions or need assistance, feel free to reach out to me.",
+  links: [
+    { label: "About Us", href: "/" },
+    { label: "Our Services", href: "/services" },
+    { label: "Our Samples", href: "/samples" },
+    { label: "Contact Us", href: "/contact" },
+    { label: "FAQ", href: "/faq" },
+  ],
+  socialLinks: [
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/jin.lee811/?locale=pt_PT&hl=es", // Instagram 프로필 URL로 변경
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" />
+        </svg>
+      ),
+    },
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/in/jin-lee-72b653272/", // LinkedIn 프로필 URL로 변경
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path d="M22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.2.79 24 1.77 24h20.46c.98 0 1.77-.79 1.77-1.73V1.73C24 .77 23.21 0 22.23 0zM7.09 20.45H3.56V9.03h3.53v11.42zM5.32 7.76c-1.13 0-2.05-.93-2.05-2.06s.92-2.06 2.05-2.06c1.13 0 2.05.93 2.05 2.06s-.92 2.06-2.05 2.06zM20.45 20.45h-3.53v-5.55c0-1.32-.03-3.03-1.85-3.03-1.85 0-2.13 1.44-2.13 2.93v5.65h-3.53V9.03h3.39v1.56h.05c.47-.89 1.62-1.82 3.34-1.82 3.57 0 4.23 2.35 4.23 5.41v6.27z" />
+        </svg>
+      ),
+    },
+    {
+      label: "GitHub",
+      href: "https://github.com/JinLee0811", // GitHub 프로필 URL로 변경
+      icon: (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="currentColor"
+          viewBox="0 0 24 24">
+          <path
+            fillRule="evenodd"
+            d="M12 2C6.48 2 2 6.48 2 12c0 4.41 2.86 8.16 6.84 9.5.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.64-1.34-2.22-.25-4.55-1.11-4.55-4.95 0-1.09.39-1.99 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.03a9.48 9.48 0 015 0c1.91-1.3 2.75-1.03 2.75-1.03.55 1.38.2 2.4.1 2.65.64.69 1.03 1.59 1.03 2.68 0 3.85-2.34 4.69-4.56 4.94.36.31.68.92.68 1.86v2.74c0 .27.18.58.68.48A10.02 10.02 0 0022 12c0-5.52-4.48-10-10-10z"
+            clipRule="evenodd"
+          />
+        </svg>
+      ),
+    },
+  ],
+  contact: {
+    email: "jinlee811811@gmail.com", // 이메일 주소 변경
+    phone: "+61 0435 233 222", // 연락처 변경
   },
-  {
-    label: "Company",
-    links: [
-      { label: "About us", href: "/" },
-      { label: "Service", href: "/service" },
-      { label: "Samples", href: "/samples", note: "look our work" },
-      { label: "Contact", href: "/contact" },
-    ],
-  },
-];
-
-const socialLinks = [
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        className="fill-current">
-        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path>
-      </svg>
-    ),
-    href: "https://twitter.com",
-  },
-  {
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        className="fill-current">
-        <path d="M15.545 6.558a9.42 9.42 0 0 1 .139 1.626c0 2.434-.87 4.492-2.384 5.885h.002C11.978 15.292 10.158 16 8 16A8 8 0 1 1 8 0a7.689 7.689 0 0 1 5.352 2.082l-2.284 2.284A4.347 4.347 0 0 0 8 3.166c-2.087 0-3.86 1.408-4.492 3.304a4.792 4.792 0 0 0 0 3.063h.003c.635 1.893 2.405 3.301 4.492 3.301 1.078 0 2.004-.276 2.722-.764h-.003a3.702 3.702 0 0 0 1.599-2.431H8v-3.08h7.545z"></path>
-      </svg>
-    ),
-    href: "https://google.com",
-  },
-];
+};
 
 const Footer: React.FC = () => {
   return (
-    <footer className="mt-auto bg-gray-900 w-full">
-      <div className="mt-auto w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 lg:pt-20 mx-auto">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6">
-          <div className="col-span-full lg:col-span-1">
-            <Link
-              to="/"
-              className="flex-none font-semibold text-white focus:outline-none focus:opacity-80"
-              aria-label="Brand">
-              <img src={LUB_no_white} alt="Logo" className="h-36 w-auto" />
-            </Link>
-          </div>
-          {footerLinks.map((section) => (
-            <div className="col-span-1" key={section.label}>
-              <h4 className="font-semibold text-gray-100">{section.label}</h4>
-              <div className="mt-3 grid space-y-3">
-                {section.links.map((link) => (
-                  <p key={link.href}>
-                    <Link
-                      to={link.href}
-                      className="inline-flex gap-x-2 text-gray-400 hover:text-gray-200 focus:outline-none focus:text-gray-200">
-                      {link.label}
-                    </Link>
-                    {link.note && (
-                      <span className="inline-block ms-1 text-xs bg-blue-700 text-white py-1 px-2 rounded-lg">
-                        {link.note}
-                      </span>
-                    )}
-                  </p>
-                ))}
-              </div>
-            </div>
-          ))}
-          <div className="col-span-2">
-            <h4 className="font-semibold text-gray-100">Stay up to date</h4>
-            <form>
-              <div className="mt-4 flex flex-col items-center gap-2 sm:flex-row sm:gap-3 bg-white rounded-lg p-2">
-                <div className="w-full">
-                  <label htmlFor="hero-input" className="sr-only">
-                    Subscribe
-                  </label>
-                  <input
-                    type="email"
-                    id="hero-input"
-                    name="hero-input"
-                    className="py-3 px-4 block w-full border-transparent rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto whitespace-nowrap p-3 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                  Subscribe
-                </button>
-              </div>
-              <p className="mt-3 text-sm text-gray-400">
-                New UI kits or big discounts. Never spam.
-              </p>
-            </form>
-          </div>
+    <footer className="bg-gray-100 py-8">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center">
+        {/* Logo */}
+        <div>
+          <img src={logo} alt="Logo" className="h-20 w-auto" />
         </div>
-        <div className="mt-5 sm:mt-12 grid gap-y-2 sm:gap-y-0 sm:flex sm:justify-between sm:items-center">
-          <div className="flex justify-between items-center">
-            <p className="text-sm text-gray-400">© {new Date().getFullYear()} Preline Labs.</p>
-          </div>
-          <div>
-            {socialLinks.map((social, index) => (
-              <a
-                key={index}
-                href={social.href}
-                target="_blank"
-                rel="noreferrer"
-                className="size-10 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent text-white hover:bg-white/10 focus:outline-none focus:bg-white/10 disabled:opacity-50 disabled:pointer-events-none">
-                {social.icon}
-              </a>
-            ))}
-          </div>
+
+        {/* Description
+        <p className="text-gray-500 leading-relaxed max-w-md mx-auto">{footerData.description}</p> */}
+
+        {/* Links */}
+        <ul className="flex justify-center gap-6">
+          {footerData.links.map((link, index) => (
+            <li key={index}>
+              <Link
+                to={link.href}
+                className="text-gray-700 transition hover:text-gray-900 text-sm font-medium">
+                {link.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        {/* Contact */}
+        <div className="flex flex-row items-center gap-4 mt-4">
+          <a
+            href={`mailto:${footerData.contact.email}`}
+            className="text-gray-700 hover:text-gray-900 transition text-sm">
+            📧 {footerData.contact.email}
+          </a>
+          <p className="text-gray-700 text-sm">{footerData.contact.phone}</p>
+        </div>
+
+        {/* Social Media Links */}
+        <div className="flex gap-6 mt-8">
+          {footerData.socialLinks.map((social, index) => (
+            <a
+              key={index}
+              href={social.href}
+              className="text-gray-700 hover:text-gray-900 transition"
+              aria-label={social.label}>
+              {social.icon}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

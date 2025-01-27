@@ -8,11 +8,14 @@ import SamplePage from "./pages/Samples";
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 const App = () => {
   return (
     <>
       <Header />
       <div className="min-h-screen bg-white dark:bg-gray-900  dark:text-gray-200 p-8">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
