@@ -49,12 +49,15 @@ const projects = [
 
 const SamplePage: React.FC = () => {
   return (
-    <section>
-      <div className="mx-auto w-full max-w-5xl px-5 py-16 md:px-10 md:py-20">
+    <section className="m-5">
+      <div className="mx-auto w-full max-w-5xl px-5 py-16 md:px-10 md:py-20 ">
         <div className="flex flex-col items-stretch">
           <h2 className="mb-5 text-center text-3xl font-bold md:text-5xl">Look around our Work!</h2>
-          <p className="mb-20 text-center text-sm sm:text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing
+          <p className="text-center text-sm sm:text-base">
+            Here is the work we have completed so far, along with the currently active website.
+          </p>
+          <p className="mb-10 text-center text-sm sm:text-base">
+            Feel free to explore, and don't hesitate to reach out if you have any questions!
           </p>
           <div className="gap-x-8 [column-count:1] md:grid-cols-2 md:gap-x-4 md:[column-count:2]">
             {projects.map((project) => (
@@ -83,12 +86,12 @@ const SamplePage: React.FC = () => {
                   <div className="flex flex-wrap items-center justify-between gap-4">
                     <a
                       href={project.websiteLink}
-                      className="r flex max-w-full gap-2.5 text-sm font-bold uppercase text-black">
+                      className="r flex max-w-full gap-2.5 text-sm font-bold uppercase text-black dark:text-white">
                       <p>VISIT WEBSITE</p>
                       <img
                         src="https://assets.website-files.com/6458c625291a94a195e6cf3a/64b636d7c440a74b4076b278_button-link.svg"
                         alt=""
-                        className="inline-block"
+                        className="inline-block dark:bg-white"
                       />
                     </a>
                     <a

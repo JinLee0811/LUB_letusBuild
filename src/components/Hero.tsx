@@ -26,7 +26,7 @@ export default function Hero() {
           <div className="flex items-stretch justify-center">
             <Link
               to="/contact"
-              className="mr-5 inline-block rounded-md bg-black px-8 py-4 text-center font-semibold text-white dark:bg-white dark:text-black md:mr-6 lg:mr-8">
+              className="mr-5 inline-block rounded-md bg-customBlue px-8 py-4 text-center font-semibold text-white dark:bg-white dark:text-black md:mr-6 lg:mr-8">
               Get a Free Consultation
             </Link>
             <Link

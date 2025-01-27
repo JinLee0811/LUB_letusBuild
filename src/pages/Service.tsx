@@ -38,7 +38,7 @@ const serviceSteps = [
 const Service: React.FC = () => {
   return (
     <>
-      <section>
+      <section className="m-5">
         {/* Container */}
         <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
           {/* Title */}

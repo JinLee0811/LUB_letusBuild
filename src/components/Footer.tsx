@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LUB_no_white from "../../public/LUB_no_white.png";
 
 const footerLinks = [
   {
@@ -58,9 +59,9 @@ const Footer: React.FC = () => {
           <div className="col-span-full lg:col-span-1">
             <Link
               to="/"
-              className="flex-none text-xl font-semibold text-white focus:outline-none focus:opacity-80"
+              className="flex-none font-semibold text-white focus:outline-none focus:opacity-80"
               aria-label="Brand">
-              Let Us Build
+              <img src={LUB_no_white} alt="Logo" className="h-36 w-auto" />
             </Link>
           </div>
           {footerLinks.map((section) => (

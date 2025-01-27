@@ -70,7 +70,7 @@ const ContactPage: React.FC = () => {
   };
 
   return (
-    <section>
+    <section className="m-5">
       <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-20">
         <div className="grid items-center gap-8 sm:gap-20 lg:grid-cols-2">
           <div className="max-w-3xl">

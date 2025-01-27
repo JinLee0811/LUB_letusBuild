@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-200 p-8 text-center">
+      <div className="min-h-screen dark:bg-gray-900 text-gray-900 dark:text-gray-200 p-8 text-center">
         <Hero />
         <CompanyExample />
         <SampleArea />
@@ -45,7 +45,7 @@ const Home = () => {
         {showButton && (
           <button
             onClick={scrollToTop}
-            className="fixed bottom-[6rem] right-4 z-50 rounded-full bg-indigo-600 p-4 text-white shadow-lg hover:bg-indigo-700 transition duration-300"
+            className="fixed bottom-[6rem] right-4 z-50 rounded-full bg-customBlue p-4 text-white shadow-lg hover:bg-customBlue transition duration-300"
             aria-label="Scroll to top">
             ↑
           </button>

@@ -16,10 +16,10 @@ const TabNav: React.FC<TabNavProps> = ({ tabs, activeTab, onTabChange }) => {
         <button
           key={tab.id}
           type="button"
-          className={`hs-tab-active:bg-gray-100 w-full flex flex-col text-start hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:bg-gray-100 dark:focus:bg-gray-700 p-3 md:p-5 rounded-xl ${
+          className={`border-2 border-gray-600 hs-tab-active:bg-gray-100 w-full flex flex-col text-start hover:bg-gray-300 dark:hover:bg-gray-700 focus:outline-none  p-3 md:p-5 rounded-xl ${
             activeTab === tab.id
-              ? "bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
-              : "text-gray-800 dark:text-gray-400"
+              ? "bg-gray-300 dark:bg-gray-700 text-gray-800 dark:text-gray-200"
+              : "text-gray-600 dark:text-gray-400"
           }`}
           onClick={() => onTabChange(tab.id)}
           aria-selected={activeTab === tab.id}

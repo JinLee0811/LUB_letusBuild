@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, useLocation } from "react-router-dom";
+import LUB_noslogun from "../../public/LUB_noslogun.png";
+import LUB_white_Logo from "../../public/LUB_white.png";
 
 const navigation = [
   { name: "About Us", href: "/" },
@@ -21,9 +23,8 @@ const Header = () => {
 
   const getLinkClasses = (href: string) =>
     pathname === href
-      ? "text-blue-600 dark:text-blue-400 font-bold"
-      : "text-gray-900 dark:text-white hover:text-blue-500 dark:hover:text-blue-300";
-
+      ? "text-customBlue dark:text-customBlue font-bold"
+      : "text-dark dark:text-white hover:text-customBlue dark:hover:text-customBlue";
   return (
     <header className="absolute inset-x-0 top-0 z-50 bg-white dark:bg-gray-900">
       <nav className="flex items-center justify-between p-6 lg:px-8">
@@ -31,9 +32,9 @@ const Header = () => {
           <Link to="/" className="-m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img
-              alt=""
-              src="https://tailwindui.com/plus/img/logos/mark.svg?color=indigo&shade=600"
-              className="h-8 w-auto"
+              alt="LUB_logo "
+              src={darkMode ? LUB_white_Logo : LUB_noslogun}
+              className="h-20 w-auto"
             />
           </Link>
         </div>
